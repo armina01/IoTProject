@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firebase Example</title>
+  <script  type="module" src="app.js"></script>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+  <div id="background"></div>
+  <div id="container">
+    <div id="info">
+      <div id="nameOfPlant">Naziv biljke: <span id="plantName">Monsera deliciosa</span></div>
+    <div id="humidityDisplay">Optimalna vlaga: <span id="optimalHumidity">75%</span></div>
+    <div id="currentHumidity">Trenutna vlaga: <span id="currentHumidityValue">0%</span></div>
+    <div id="pumpStatus">Status pumpe: <span id="pumpStatusValue">Isključena</span></div>
+    </div>
+    <div id="controlButton">
+        <button id="control-button" onclick="togglePump()">ON / OFF</button>
+    </div>
+  </div>
+
+
+  <!-- <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+    import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js";
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBH1Lf7ujY8LcjD0V5N6ddGs2KxvPUadSs",
+      authDomain: "plant-watering-system-67b6d.firebaseapp.com",
+      databaseURL: "https://plant-watering-system-67b6d-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "plant-watering-system-67b6d",
+      storageBucket: "plant-watering-system-67b6d.appspot.com",
+      messagingSenderId: "1080605592274",
+      appId: "1:1080605592274:web:45c361d9926019ff73bb0b"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+    // Initialize Realtime Database and get a reference to the service ...kreiranje reference na db 
+const database = getDatabase(app);
+
+// Funkcija za upisivanje podataka
+function writeUserData(userId, name, email) {
+   const db = getDatabase();
+   set(ref(db, 'users/' + userId), {
+     username: name,
+     email: email,
+   })
+     .then(() => {
+       console.log('Podaci su uspješno upisani u bazu.');
+     })
+     .catch((error) => {
+       console.error('Greška prilikom upisivanja podataka:', error);
+     });
+ }
+
+ // Dodajte događaj slušanja na dugme
+ const writeDataButton = document.getElementById('writeDataButton');
+ writeDataButton.addEventListener('click', () => {
+   const userId = '123'; // Zamijenite sa stvarnim ID-om korisnika
+   const userName = 'John Doe';
+   const userEmail = 'john.doe@example.com';
+   writeUserData(userId, userName, userEmail);
+ });
+
+
+
+</script> -->
+
+</body>
+  <!-- <script type="module" src="app.js"></script>  
+  <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js"></script>  -->
+</html>
